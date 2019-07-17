@@ -16,6 +16,8 @@ let Browse = {
         let productMap = null;
         let title = "All";
 
+        let title = "All";
+
         if(type == "droids") {
             productMap = productList.get('droids');
             title += " Droids";
