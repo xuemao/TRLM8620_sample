@@ -1,6 +1,6 @@
 import Utils from '../../services/Utils.js';
 import i18n from '../../services/i18n.js';
-import {productList, formatCurrency} from "../../app.js";
+import {productList} from "../../app.js";
 
 let type;
 
@@ -36,7 +36,7 @@ let Browse = {
                         <div class="gridDes">
                             <h3>${product.title}</h3>
                             <div class="gridPrice">
-                                ${formatCurrency(product.price)}
+                                ${i18n.formatCurrency(product.price, "b")}
                             </div>
                         </div>
                     </article>`;
