@@ -63,4 +63,4 @@ let Browse = {
     } 
 }
 
-export { Browse };
+export default Browse;
