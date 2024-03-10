@@ -11,7 +11,6 @@ let Browse = {
         type = request.resource;
 
         let productMap = null;
-        let title = "All";
 
         let title;
 

@@ -22,7 +22,7 @@ let Hamburger = {
         let localeZH = i18n.getString("Hamburger", "localeZH");
         let localeYO = i18n.getString("Hamburger", "localeYO");
         let localeSI = i18n.getString("Hamburger", "localeSI");
-        let localeEO = i18n.getString("Hamburger", "localeEO")
+        let localeEO = i18n.getString("Hamburger", "localeEO");
         let githubLabel = i18n.getString("Hamburger", "githubLabel");
         let dashLabel = i18n.getString("Hamburger", "dashLabel");
         let contactLabel = i18n.getString("Hamburger", "contactLabel");
@@ -34,8 +34,8 @@ let Hamburger = {
             <div class="start">
                 <label for="version"><h3>${versionLabel}</h3></label>
                 <select id="version" class="hamDrop">
-                    <option value="IQA" disabled selected hidden>${versionIQA}</option>
-                    <option value="good">${versionGood}</option>
+                    <option value="good" disabled selected hidden>${versionGood}</option>
+                    <option value="IQA">${versionIQA}</option>
                     <option value="bad">${versionBad}</option>
                 </select>
             </div>
@@ -51,13 +51,13 @@ let Hamburger = {
                 </select>
             </div>
             <div class="githubLink outsideLink block">
-            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/Rebel-Outfitters/tree/IQA">
+            <a target="_blank" rel="noreferrer" href="https://github.com/Lingoport/Rebel-Outfitters/tree/i18n">
                     <img src="img/github_logo.png" class="logoThumb" alt="${githubLogoAlt}">
                     ${githubLabel}</a>
                 
             </div>
             <div class="dashLink outsideLink block">
-            <a target="_blank" href="https://poc.lingoport.io/command-center/project/overview/11" class="inline" rel="noreferrer">
+            <a target="_blank" href="https://poc.lingoport.io/command-center/project/overview/10" class="inline" rel="noreferrer">
                     <img src="img/lingoport_thumb.png" class="logoThumb" alt="${lingoLogoAlt}">
                     ${dashLabel}</a>
                 
@@ -112,8 +112,8 @@ var switchVersion = (e) => {
 
     let selectedOption = event.target.value;
 
-    if (selectedOption == "good") { //$NON-NLS-L$
-        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.i18n/${parsedURL}`;
+    if (selectedOption == "IQA") { //$NON-NLS-L$
+        window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.IQA/${parsedURL}`;
     }
     else if (selectedOption == "bad") { //$NON-NLS-L$
         window.location.href = `http://rebeloutfitters.lingoport.com/RebelOutfitters.DarkSide/${parsedURL}`;
