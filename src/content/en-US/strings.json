@@ -43,7 +43,6 @@
         "navLinkVehicles": "VEHICLES"
     },
     "Home": {
-        "welcomeMessage": "Welcome to Rebel Outfitters!",
         "welcomeSubtitle": "We provide everything you need to take on the Empire (and win).",
         "symbolAlt": "Imperial Credit currency symbol"
     },
@@ -123,11 +122,6 @@
         "dashLabel": "Command Center (demo/demo)",
         "contactLabel": "Contact Us",
         "learnLabel": "Learn More"
-    },
-    "Order": {
-        "statusProcessing": "Processing",
-        "statusShipped": "Shipped",
-        "statusDelivered": "Delivered"
     },
     "Special": "Special"
 }

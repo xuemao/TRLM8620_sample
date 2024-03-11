@@ -60,7 +60,7 @@ header {
   width: 100%;
   height: 60px;
   display: grid;
-  grid-template-columns: 400px 1fr 275px;
+  grid-template-columns: 400px 1fr 450px;
 }
 header section {
   display: flex;
@@ -896,6 +896,33 @@ p {
 }
 .hamSlider .outsideLink:hover {
   background-color: #27235e;
+}
+
+.localeSelector {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.localeSelector .hamDrop {
+  display: block;
+}
+
+.localeSelector label h3 {
+  color: white;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.localeSelector select {
+  width: 100%;
+  background-color: #a6c740;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 105%;
+  border: 1px solid #27235e;
 }
 
 .block {

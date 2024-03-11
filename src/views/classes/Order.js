@@ -19,7 +19,12 @@ class Order {
     }
 
     getOrderDate() {
-        return i18n.formatDate(this.orderDate);
+        var dd = String(this.orderDate.getDate()).padStart(2, '0');
+        var mm = String(this.orderDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = this.orderDate.getFullYear();
+
+        let date = mm + '/' + dd + '/' + yyyy;
+        return date;
     }
 
     //create a dummy "order status" string
@@ -30,13 +35,13 @@ class Order {
         var diffDays = Math.floor(Math.abs((this.orderDate.getTime() - now.getTime())/(oneDay))); //$NON-NLS-L$
 
         if(diffDays < 2) {
-            return i18n.getString('Order', 'statusProcessing');
+            return "Processing";
         }
         if(diffDays < 4) {
-            return i18n.getString('Order', 'statusShipped');
+            return "Shipped"
         }
         else{
-            return i18n.getString('Order', 'statusDelivered');
+            return "Delivered";
         }
     }
 

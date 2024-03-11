@@ -255,12 +255,12 @@ const router = async () => {
     // Render the Header, footer, and empty cart of the page
     cart.innerHTML = await Cart.render();
     await Cart.after_render();
-    ham.innerHTML = await Hamburger.render();
-    await Hamburger.after_render();
+    // ham.innerHTML = await Hamburger.render();
+    // await Hamburger.after_render();
     header.innerHTML = await Navbar.render();
     await Navbar.after_render();
-    footer.innerHTML = await Bottombar.render();
-    await Bottombar.after_render();
+    // footer.innerHTML = await Bottombar.render();
+    // await Bottombar.after_render();
 
     //add some dummy orders if there's nothing there
     if(orderHistory.length == 0) {

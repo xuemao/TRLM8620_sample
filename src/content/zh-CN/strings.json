@@ -43,13 +43,8 @@
     "navLinkVehicles": "车辆"
     },
     "Home": {
-    "welcomeMessage": "欢迎来到Rebel Outfitters！",
     "welcomeSubtitle": "我们提供您在帝国（和胜利）上所需的一切。",
     "symbolAlt": "Imperial Credit currency symbol"
-    },
-    "Browse": {
-    "droidTitle": "所有的機器人",
-    "vehicleTitle": "所有車輛"
     },
     "Checkout": {
     "checkoutTitle": "查看",
@@ -123,11 +118,6 @@
     "dashLabel": "View Lingoport Dashboard",
     "contactLabel": "Contact Us",
     "learnLabel": "Learn More"
-    },
-    "Order": {
-    "statusProcessing": "处理",
-    "statusShipped": "运",
-    "statusDelivered": "交付"
     },
   "Special": "特殊"
 }

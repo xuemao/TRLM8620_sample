@@ -1,6 +1,9 @@
 import Utils from "../../services/Utils.js";
-import { showCart} from "../../app.js";
+import { locale, updateLocale, showCart} from "../../app.js";
 import i18n from "../../services/i18n.js";
+
+//global dropdown element reference
+let drop;
 
 let Navbar = {
     render: async () => {
@@ -16,6 +19,10 @@ let Navbar = {
         let navLinkHome = i18n.getString("Navbar", "navLinkHome");
         let navLinkDroids = i18n.getString("Navbar", "navLinkDroids");
         let navLinkVehicles = i18n.getString("Navbar", "navLinkVehicles");
+
+        let localeLabel = i18n.getString("Hamburger", "localeLabel");
+        let localeEN = i18n.getString("Hamburger", "localeEN");
+        let localeZH = i18n.getString("Hamburger", "localeZH");
 
         //view is solely for HTML markup, contains no static text
         let view =
@@ -43,6 +50,13 @@ let Navbar = {
                 </div>
             </div>
             <img src="img/cart.svg" class="cartIcon" alt="${cartAlt}">
+            <div class="localeSelector">
+              <label for="locale"><h3>${localeLabel}</h3></label>
+              <select id="locale" class="hamDrop">
+                <option value="en-US">${localeEN}</option>
+                <option value="zh-CN">${localeZH}</option>
+              </select>
+            </div>
         </section>
     </header>
     <nav>
@@ -90,6 +104,12 @@ let Navbar = {
                 cur.classList.add("inactiveLink");
             }
         }
+
+        drop = document.querySelector('#locale');
+        //show selected locale in dropdown
+        drop.value = locale;
+        //listen for locale changes
+        drop.addEventListener("input", changeLocale, false);
     }
 }
 
@@ -103,6 +123,10 @@ var hideCart = e => {
     bg.classList.remove('overlay');
 }
 
-
+//function to change locale and reload page
+var changeLocale = (e) => {
+    let newLocale = drop.value;
+    updateLocale(newLocale);
+}
 
 export default Navbar;

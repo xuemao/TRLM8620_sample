@@ -84,6 +84,7 @@ const products = {
             "imageURL": "img/74-Z.png",
             "desc": i18n.getString("desc", "8")
         },
+        /*
         {
             "productID" : 9,
             "type": "vehicle",
@@ -129,6 +130,7 @@ const products = {
             "imageURL": "img/Super_Tactical.png",
             "desc": i18n.getString("desc", "13")
         }
+        */
         ];
 
         return productCatalog;
